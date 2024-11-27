@@ -52,6 +52,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -169,7 +170,8 @@ public class CswFilterDelegateTest {
 
   static {
     try {
-      SAMPLE_NON_ISO_8601_DATE = new SimpleDateFormat("MMM d yyyy").parse("Jun 11 2003");
+      SAMPLE_NON_ISO_8601_DATE =
+          new SimpleDateFormat("MMM d yyyy", Locale.ENGLISH).parse("Jun 11 2003");
     } catch (ParseException pe) {
       LOGGER.error("Unable to instantiate SAMPLE_NON_ISO_8601_DATE", pe);
       throw new RuntimeException();
@@ -1776,7 +1778,8 @@ public class CswFilterDelegateTest {
 
     Map<String, Object> propMap = new HashMap<>();
     propMap.put("extendedComparisonOp", "relative");
-    propMap.put("duration", new Long(duration));
+    // propMap.put("duration", new Long(duration));
+    propMap.put("duration", Long.valueOf(duration));
 
     String xml =
         getXmlProperty(

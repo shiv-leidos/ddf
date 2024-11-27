@@ -45,6 +45,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.JAXBException;
@@ -2036,7 +2037,7 @@ public class WfsFilterDelegateTest {
 
   private Date getDate() {
     String dateString = "Jun 11 2002";
-    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy");
+    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy", Locale.ENGLISH);
     Date date = null;
     try {
       date = formatter.parse(dateString);
@@ -2048,7 +2049,7 @@ public class WfsFilterDelegateTest {
 
   private Date getEndDate() {
     String dateString = "Jul 11 2002";
-    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy");
+    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy", Locale.ENGLISH);
     Date date = null;
     try {
       date = formatter.parse(dateString);

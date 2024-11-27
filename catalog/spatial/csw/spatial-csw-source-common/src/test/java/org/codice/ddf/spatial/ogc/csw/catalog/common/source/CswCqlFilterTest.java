@@ -26,6 +26,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import javax.xml.namespace.QName;
 import net.opengis.filter.v_1_1_0.ComparisonOperatorType;
 import net.opengis.filter.v_1_1_0.ComparisonOperatorsType;
@@ -1491,7 +1492,7 @@ public class CswCqlFilterTest {
 
   private Date getDate() {
     String dateString = "Jun 11 2002";
-    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy");
+    SimpleDateFormat formatter = new SimpleDateFormat("MMM d yyyy", Locale.ENGLISH);
     Date aDate = null;
     try {
       aDate = formatter.parse(dateString);
