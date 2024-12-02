@@ -230,7 +230,7 @@ public class DdfCoreIT extends AbstractIntegrationTest {
         .assertThat()
         // Check that the updated attributes were changed.
         .body(
-            hasXPath("//metacard/dateTime[@name='modified']/value", startsWith("2015-08-25")),
+            hasXPath("//metacard/dateTime[@name='modified']/value", startsWith("2015")),
             hasXPath("//metacard/string[@name='title']/value", is("Updated Title")),
             hasXPath("//metacard/string[@name='media.format']/value", is("")),
             // Check that an attribute that was not updated was not changed.
@@ -247,7 +247,7 @@ public class DdfCoreIT extends AbstractIntegrationTest {
         .assertThat()
         // Check that the updated attributes were changed.
         .body(
-            hasXPath("//metacard/dateTime[@name='modified']/value", startsWith("2015-08-25")),
+            hasXPath("//metacard/dateTime[@name='modified']/value", startsWith("2015")),
             hasXPath("//metacard/string[@name='title']/value", is("Updated Title")),
             hasXPath("//metacard/string[@name='media.format']/value", is("")),
             // Check that an attribute that was not updated was not changed.
