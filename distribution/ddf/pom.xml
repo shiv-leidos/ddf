@@ -70,6 +70,7 @@
                                 <descriptor>mvn:org.apache.karaf.decanter/apache-karaf-decanter/${decanter.version}/xml/features</descriptor>
                                 <descriptor>mvn:org.ops4j.pax.web/pax-web-features/${pax.web.version}/xml/features</descriptor>
 
+                                <descriptor>mvn:ddf.features/camel-karaf/${project.version}/xml/features</descriptor>
                                 <descriptor>mvn:ddf.features/kernel/${project.version}/xml/features</descriptor>
                                 <descriptor>mvn:ddf.features/install-profiles/${project.version}/xml/features</descriptor>
                                 <descriptor>mvn:ddf.features/apps/${project.version}/xml/features</descriptor>
@@ -288,6 +289,13 @@
         <dependency>
             <groupId>ddf.features</groupId>
             <artifactId>admin</artifactId>
+            <version>${project.version}</version>
+            <classifier>features</classifier>
+            <type>xml</type>
+        </dependency>
+        <dependency>
+            <groupId>ddf.features</groupId>
+            <artifactId>camel-karaf</artifactId>
             <version>${project.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
